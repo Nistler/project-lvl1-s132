@@ -1,0 +1,33 @@
+{
+  "name": "1st",
+  "version": "0.0.1",
+  "description": "firstProject",
+  "main": "index.js",
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  },
+  "dependencies": {
+    "brain-games": "^1.1.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-0": "^6.24.1"
+  },
+  "scripts": {
+    "babel-node": "babel-node",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nistler/project-lvl1-s132.git"
+  },
+  "author": "eugene",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nistler/project-lvl1-s132/issues"
+  },
+  "homepage": "https://github.com/Nistler/project-lvl1-s132#readme"
+}
