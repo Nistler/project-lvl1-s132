@@ -1,13 +1,15 @@
 {
   "name": "1st",
-  "version": "0.0.2",
+  "version": "0.1.3",
   "description": "firstProject",
   "main": "index.js",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "dependencies": {
     "babel-eslint": "^8.0.1",
+    "brain-even": "^0.1.12",
     "readline-sync": "^1.4.7"
   },
   "devDependencies": {
