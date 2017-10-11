@@ -8,7 +8,6 @@
     "brain-even": "dist/bin/brain-even.js"
   },
   "dependencies": {
-    "babel-eslint": "^8.0.1",
     "readline-sync": "^1.4.7"
   },
   "devDependencies": {
