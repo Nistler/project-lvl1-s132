@@ -7,7 +7,7 @@ export const getName = () => {
 };
 
 export const startEven = () => {
-  const name = getName(); 
+  const name = getName();
   let q = null;
   let a = null;
   const wrA = (ans) => {
