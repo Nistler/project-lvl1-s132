@@ -1,22 +1,26 @@
 import readlineSync from 'readline-sync';
+import { car, cdr } from 'hexlet-pairs';
 
-const startEven = () => {
+export const RandomNumber = max => Math.floor(Math.random() * max) + 1;
+
+export const startGame = (makeTask, rules) => {
   console.log('\nWelcome to the Brain Games!');
-  console.log('Answer "yes" if number even otherwise answer "no".\n');
+  console.log(rules);
   const username = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${username}!`);
-  for (let i = 0; i < 3; i += 1) {
-    const question = Math.round(1 + (Math.random() * 100));
+  const stepsToWin = 3;
+  for (let step = 1; step <= stepsToWin; step += 1) {
+    const task = makeTask();
+    const question = car(task);
+    const correctAnswer = cdr(task);
     console.log('\nQuestion: ', question);
-    const controlAnswer = (question % 2 === 0) ? 'yes' : 'no';
-    const answer = readlineSync.question('Your answer: ');
-    if (controlAnswer !== answer) {
-      console.log(`${answer} is wrong answer :(. Correct answer was ${controlAnswer}.`);
+    const playerAnswer = readlineSync.question('Your answer: ');
+    if (correctAnswer !== playerAnswer) {
+      console.log(`"${playerAnswer}" is wrong answer :(. Correct answer was "${correctAnswer}".`);
       console.log(`Let's try again, ${username}!`);
       return;
     }
     console.log('Correct!');
   }
-  console.log(`Congratulations, ${username}`);
+  console.log(`Congratulations, ${username}!`);
 };
-export default startEven;
