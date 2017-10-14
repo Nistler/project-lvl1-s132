@@ -14,8 +14,8 @@ const makeTask = () => {
   const firstNum = RandomNumber(maxNum);
   const secondNum = RandomNumber(maxNum);
   const question = `${firstNum} ${secondNum}`;
-  const answer = findMaxDiv(firstNum, secondNum);
-  return cons(question, `${answer}`);
+  const answer = String(findMaxDiv(firstNum, secondNum));
+  return cons(question, answer);
 };
 
 export default () => startGame(makeTask, gameDescription);
