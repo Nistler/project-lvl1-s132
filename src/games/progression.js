@@ -22,8 +22,8 @@ const makeProgresson = (startNum, step) => {
 const makeNewProgression = (Progression, missingPos) => {
   let newProgression = '';
   for (let i = 0; i < progressionLength; i += 1) {
-    if (i !== missingPos) newProgression += Progression[i];
-    else newProgression += '..';
+    if (i === missingPos) newProgression += '..';
+    else newProgression += Progression[i];
     if (i < 9) newProgression += ' ';
   }
   return newProgression;
