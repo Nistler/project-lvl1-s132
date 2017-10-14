@@ -1,7 +1,8 @@
 import { cons } from 'hexlet-pairs';
-import { startGame, RandomNumber } from '..';
+import RandomNumber from '../utils';
+import startGame from '..';
 
-const rules = 'What is the result of the expression?\n';
+const gameDescription = 'What is the result of the expression?';
 const maxNum = 100;
 
 const makeTask = () => {
@@ -17,4 +18,4 @@ const makeTask = () => {
   }
 };
 
-export default () => startGame(makeTask, rules);
+export default () => startGame(makeTask, gameDescription);

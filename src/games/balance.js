@@ -1,7 +1,8 @@
 import { cons } from 'hexlet-pairs';
-import { startGame, RandomNumber } from '..';
+import RandomNumber from '../utils';
+import startGame from '..';
 
-const rules = 'Balance the given number.\n';
+const gameDescription = 'Balance the given number.';
 const maxNum = 999;
 
 const summing = (number, length) => {
@@ -36,4 +37,4 @@ const makeTask = () => {
   return cons(question, `${answer}`);
 };
 
-export default () => startGame(makeTask, rules);
+export default () => startGame(makeTask, gameDescription);

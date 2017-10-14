@@ -1,7 +1,8 @@
 import { cons } from 'hexlet-pairs';
-import { startGame, RandomNumber } from '..';
+import RandomNumber from '../utils';
+import startGame from '..';
 
-const rules = 'Find the greatest common divisor of given numbers.\n';
+const gameDescription = 'Find the greatest common divisor of given numbers.';
 const maxNum = 100;
 
 const findMaxDiv = (n1, n2) => {
@@ -17,4 +18,4 @@ const makeTask = () => {
   return cons(question, `${answer}`);
 };
 
-export default () => startGame(makeTask, rules);
+export default () => startGame(makeTask, gameDescription);
