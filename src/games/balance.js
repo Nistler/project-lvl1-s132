@@ -33,8 +33,8 @@ const makeBalanced = (num) => {
 // Генерация задачи
 const makeTask = () => {
   const question = RandomNumber(maxNum);
-  const answer = makeBalanced(question);
-  return cons(question, `${answer}`);
+  const answer = String(makeBalanced(question));
+  return cons(question, answer);
 };
 
 export default () => startGame(makeTask, gameDescription);
